@@ -21,6 +21,9 @@ const arrowLeft = document.querySelector(".arrow_left")
 
 const arrowRight = document.querySelector(".arrow_right")
 
+const dots = document.querySelector(".dots")
+
+let index = 0
 
 arrowRight.addEventListener("click", () => 
 	console.log("J'ai cliqué sur la flèche de droite")
@@ -29,3 +32,16 @@ arrowRight.addEventListener("click", () =>
 arrowLeft.addEventListener("click", () =>
 	console.log("J'ai cliqué sur la flèche de gauche")
 )
+
+displayDots();
+
+function displayDots() {
+	for (let i = 0; i < slides.length; i++) {
+		const dot = document.createElement("div");
+		dot.classList.add("dot");
+		dots.appendChild(dot);
+		if (i == index) {
+			dot.classList.add("dot_selected")
+		}
+	}
+}
