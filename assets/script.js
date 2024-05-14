@@ -36,6 +36,9 @@ arrowRight.addEventListener("click", () => {
 	const slidesDots = document.querySelectorAll(".dots .dot")
 	slidesDots[index].classList.remove("dot_selected")
 	index++;
+	if (index > slides.lenght - 1) {
+		
+	}
 	slidesDots[index].classList.add ("dot_selected")
 	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`
 	txtCarrousel.innerHTML = slides[index].tagLine;
@@ -46,6 +49,9 @@ arrowLeft.addEventListener("click", () => {
 	const slidesDots = document.querySelectorAll(".dots .dot");
 	slidesDots[index].classList.remove("dot_selected")
 	index--;
+	if (index < 0) {
+		index = slides.length - 1;
+	}
 	slidesDots[index].classList.add ("dot_selected")
 	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`
 	txtCarrousel.innerHTML = slides[index].tagLine;
@@ -54,10 +60,11 @@ arrowLeft.addEventListener("click", () => {
 
 
 
+/***********CREATION DES DOTS **************/
 
-displayDots();
+createDots();
 
-function displayDots() {
+function createDots() {
 	for (let i = 0; i < slides.length; i++) {
 		const dot = document.createElement("div");
 		dot.classList.add("dot");
