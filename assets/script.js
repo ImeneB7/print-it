@@ -25,13 +25,35 @@ const dots = document.querySelector(".dots")
 
 let index = 0
 
-arrowRight.addEventListener("click", () => 
-	console.log("J'ai cliqué sur la flèche de droite")
-)
+let imageCarrousel = document.querySelector(".banner-img")
 
-arrowLeft.addEventListener("click", () =>
+let txtCarrousel = document.querySelector("#banner p")
+
+
+
+
+arrowRight.addEventListener("click", () => {
+	const slidesDots = document.querySelectorAll(".dots .dot")
+	slidesDots[index].classList.remove("dot_selected")
+	index++;
+	slidesDots[index].classList.add ("dot_selected")
+	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`
+	txtCarrousel.innerHTML = slides[index].tagLine;
+	console.log("J'ai cliqué sur la flèche de droite")
+})
+
+arrowLeft.addEventListener("click", () => {
+	const slidesDots = document.querySelectorAll(".dots .dot");
+	slidesDots[index].classList.remove("dot_selected")
+	index--;
+	slidesDots[index].classList.add ("dot_selected")
+	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`
+	txtCarrousel.innerHTML = slides[index].tagLine;
 	console.log("J'ai cliqué sur la flèche de gauche")
-)
+})
+
+
+
 
 displayDots();
 
