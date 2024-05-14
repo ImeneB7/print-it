@@ -36,8 +36,8 @@ arrowRight.addEventListener("click", () => {
 	const slidesDots = document.querySelectorAll(".dots .dot")
 	slidesDots[index].classList.remove("dot_selected")
 	index++;
-	if (index > slides.lenght - 1) {
-		
+	if (index > slides.length - 1) {
+		index = 0
 	}
 	slidesDots[index].classList.add ("dot_selected")
 	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`
