@@ -17,20 +17,26 @@ const slides = [
 	}
 ]
 
+/************ ÉLEMENTS DU DOM ************/
+
 const arrowLeft = document.querySelector(".arrow_left")
 
 const arrowRight = document.querySelector(".arrow_right")
 
 const dots = document.querySelector(".dots")
 
+
+
+/********* VARIABLES ***********/
+
 let index = 0
 
-let imageCarrousel = document.querySelector(".banner-img")
+const imageCarrousel = document.querySelector(".banner-img")
 
-let txtCarrousel = document.querySelector("#banner p")
+const txtCarrousel = document.querySelector("#banner p")
 
 
-
+/******** ÉCOUTEURS D'EVENEMENTS */
 
 arrowRight.addEventListener("click", () => {
 	const slidesDots = document.querySelectorAll(".dots .dot")
