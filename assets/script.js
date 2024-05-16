@@ -26,15 +26,15 @@ const arrowRight = document.querySelector(".arrow_right")
 const dots = document.querySelector(".dots")
 
 
-
-/********* VARIABLES ***********/
-
-let index = 0
+/**** */
 
 const imageCarrousel = document.querySelector(".banner-img")
 
 const txtCarrousel = document.querySelector("#banner p")
 
+/********* VARIABLES ***********/
+
+let index = 0
 
 /******** ÉCOUTEURS D'EVENEMENTS */
 
